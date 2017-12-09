@@ -57,16 +57,16 @@ public class UserInterface {
 
 	private void addEventListener() {
 		list.addMouseListener(new MouseAdapter() {
-    		@Override
-	    	public void mouseClicked(MouseEvent evt) {
-	        	if (evt.getClickCount() == 2) {
-		           	int index = list.getSelectedIndex();
-		           	if(controls.getIsPlaying()) {
-		           		controls.getPlayer().close();
-		           	}
-		           	controls.playSong(songs.get(index));
-	        	}
-	    	}
+			@Override
+			public void mouseClicked(MouseEvent evt) {
+				if (evt.getClickCount() == 2) {
+					int index = list.getSelectedIndex();
+					if(controls.getIsPlaying()) {
+						controls.getPlayer().close();
+					}
+					controls.playSong(songs.get(index));
+				}
+			}
 		});
 	}
 }
